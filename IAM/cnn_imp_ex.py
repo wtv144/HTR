@@ -100,6 +100,15 @@ y_valid, y_train = y_train[:5000], y_train[5000:]
 n_epochs = 10
 batch_size = 100
 
+
+def shuffle_batch(X, y, batch_size):
+    rnd_idx = np.random.permutation(len(X))
+    n_batches = len(X) // batch_size
+    for batch_idx in np.array_split(rnd_idx, n_batches):
+        X_batch, y_batch = X[batch_idx], y[batch_idx]
+        yield X_batch, y_batch
+
+
 with tf.Session() as sess:
     init.run()
     for epoch in range(n_epochs):

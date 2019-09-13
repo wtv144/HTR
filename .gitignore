@@ -3,3 +3,4 @@ IAM/Data/*
 MNIST/Data/*
 *.p
 *.pkl
+*.npy

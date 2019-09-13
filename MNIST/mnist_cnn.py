@@ -1,4 +1,4 @@
-kimport tensorflow as tf
+import tensorflow as tf
 import numpy as np
 from sklearn.datasets import load_sample_images
 import matplotlib.pyplot as plt
